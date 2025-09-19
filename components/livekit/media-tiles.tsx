@@ -30,6 +30,7 @@ const animationProps = {
     scale: 0,
   },
   transition: {
+    // eslint-disable-next-line @typescript-eslint/prefer-as-const
     type: 'spring' as 'spring',
     stiffness: 675,
     damping: 75,
@@ -106,7 +107,8 @@ export function MediaTiles({ chatOpen }: MediaTilesProps) {
 
   const transition = {
     ...animationProps.transition,
-    delay: chatOpen ? 0 : 0.15, // delay on close
+    delay: chatOpen ? 0 : 0.15,
+    // eslint-disable-next-line @typescript-eslint/prefer-as-const
     type: 'spring' as 'spring',
   };
   const agentAnimate = {
@@ -186,6 +188,7 @@ export function MediaTiles({ chatOpen }: MediaTilesProps) {
                   transition={{
                     ...animationProps.transition,
                     delay: chatOpen ? 0 : 0.15,
+                    // eslint-disable-next-line @typescript-eslint/prefer-as-const
                     type: 'spring' as 'spring',
                   }}
                   className="h-[90px]"
