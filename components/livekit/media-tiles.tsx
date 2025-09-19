@@ -30,7 +30,7 @@ const animationProps = {
     scale: 0,
   },
   transition: {
-    type: 'spring',
+    type: 'spring' as 'spring',
     stiffness: 675,
     damping: 75,
     mass: 1,
@@ -72,6 +72,7 @@ const classNames = {
   // chatOpen: false,
   // hasSecondTile: false
   // layout: Column 2 / Row 2
+
   // align: x-end y-end
   secondTileChatClosed: ['col-start-2 row-start-3', 'place-content-end'],
 };
@@ -106,6 +107,7 @@ export function MediaTiles({ chatOpen }: MediaTilesProps) {
   const transition = {
     ...animationProps.transition,
     delay: chatOpen ? 0 : 0.15, // delay on close
+    type: 'spring' as 'spring',
   };
   const agentAnimate = {
     ...animationProps.animate,
@@ -181,10 +183,10 @@ export function MediaTiles({ chatOpen }: MediaTilesProps) {
                   layout="position"
                   layoutId="camera"
                   {...animationProps}
-                  trackRef={cameraTrack}
                   transition={{
                     ...animationProps.transition,
                     delay: chatOpen ? 0 : 0.15,
+                    type: 'spring' as 'spring',
                   }}
                   className="h-[90px]"
                 />
