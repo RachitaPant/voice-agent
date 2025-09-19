@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+// @ts-ignore
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
